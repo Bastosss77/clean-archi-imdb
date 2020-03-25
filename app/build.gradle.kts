@@ -30,4 +30,6 @@ dependencies {
     implementation(Dependencies.AndroidX.core)
     implementation(Dependencies.AndroidX.appCompat)
     implementation(Dependencies.AndroidX.constraintLayout)
+    implementation(Dependencies.AndroidX.navigationComponent)
+    implementation(Dependencies.AndroidX.navigationComponentFragment)
 }

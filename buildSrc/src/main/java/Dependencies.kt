@@ -1,19 +1,23 @@
 object Dependencies {
 
     object Kotlin {
-        val version = "1.3.70"
+        const val version = "1.3.70"
 
-        val stdLib = "org.jetbrains.kotlin:kotlin-stdlib:${version}"
+        const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib:${version}"
     }
 
     object AndroidX {
-        val core = "androidx.core:core-ktx:1.2.0"
-        val appCompat = "androidx.appcompat:appcompat:1.1.0"
-        val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+        private const val navigationComponentVersion = "2.3.0-alpha04"
+
+        const val core = "androidx.core:core-ktx:1.2.0"
+        const val appCompat = "androidx.appcompat:appcompat:1.1.0"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+        const val navigationComponentFragment = "androidx.navigation:navigation-fragment-ktx:$navigationComponentVersion"
+        const val navigationComponent = "androidx.navigation:navigation-ui-ktx:$navigationComponentVersion"
     }
 
     object Gradle {
-        val gradle = "com.android.tools.build:gradle:4.0.0-beta03"
-        val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}"
+        const val gradle = "com.android.tools.build:gradle:4.0.0-beta03"
+        const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}"
     }
 }
