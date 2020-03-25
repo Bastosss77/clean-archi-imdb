@@ -35,4 +35,7 @@ dependencies {
     implementation(Dependencies.AndroidX.navigationComponentFragment)
     implementation(Dependencies.AndroidX.viewModel)
     implementation(Dependencies.AndroidX.viewModelExtensions)
+
+    implementation(Dependencies.Koin.koin)
+    implementation(Dependencies.Koin.viewModel)
 }
