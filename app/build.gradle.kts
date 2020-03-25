@@ -27,9 +27,12 @@ android {
 dependencies {
     //implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation(Dependencies.Kotlin.stdLib)
+
     implementation(Dependencies.AndroidX.core)
     implementation(Dependencies.AndroidX.appCompat)
     implementation(Dependencies.AndroidX.constraintLayout)
     implementation(Dependencies.AndroidX.navigationComponent)
     implementation(Dependencies.AndroidX.navigationComponentFragment)
+    implementation(Dependencies.AndroidX.viewModel)
+    implementation(Dependencies.AndroidX.viewModelExtensions)
 }
