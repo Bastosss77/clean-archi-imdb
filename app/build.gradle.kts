@@ -1,3 +1,7 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
+val apiKey = gradleLocalProperties(rootDir).getProperty("imdb.key")
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -14,6 +18,8 @@ android {
         versionCode = 1
         versionName = "0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "IMDB_key", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -21,6 +27,15 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+                targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -38,4 +53,11 @@ dependencies {
 
     implementation(Dependencies.Koin.koin)
     implementation(Dependencies.Koin.viewModel)
+
+    implementation(Dependencies.Retrofit.retrofit)
+    implementation(Dependencies.Retrofit.logging)
+    implementation(Dependencies.Retrofit.jackson)
+    implementation(Dependencies.Retrofit.jacksonKotlin)
+
+    implementation(Dependencies.Timber.timber)
 }

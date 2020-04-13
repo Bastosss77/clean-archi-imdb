@@ -10,6 +10,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
+import timber.log.Timber
 
 class CleanArchiApplication : Application() {
 
@@ -17,6 +18,7 @@ class CleanArchiApplication : Application() {
         super.onCreate()
 
         setupKoin()
+        setupTimber()
     }
 
     private fun setupKoin() {
@@ -36,5 +38,9 @@ class CleanArchiApplication : Application() {
             androidContext(this@CleanArchiApplication)
             modules(appModules)
         }
+    }
+
+    private fun setupTimber() {
+        Timber.plant(Timber.DebugTree())
     }
 }

@@ -10,5 +10,5 @@ abstract class UseCase<in Params, out Type> {
         emit(run(params))
     }.flowOn(Dispatchers.IO)
 
-    abstract suspend fun run(params: Params) : Type
+    protected abstract suspend fun run(params: Params) : Type
 }

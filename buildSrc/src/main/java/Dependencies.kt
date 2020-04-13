@@ -26,8 +26,19 @@ object Dependencies {
         const val viewModel = "org.koin:koin-android-viewmodel:$version"
     }
 
+    object Retrofit {
+        const val retrofit = "com.squareup.retrofit2:retrofit:2.8.0"
+        const val logging = "com.squareup.okhttp3:logging-interceptor:4.3.1"
+        const val jackson = "com.squareup.retrofit2:converter-jackson:2.8.0"
+        const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.10.+"
+    }
+
     object Gradle {
-        const val gradle = "com.android.tools.build:gradle:4.0.0-beta03"
+        const val gradle = "com.android.tools.build:gradle:4.1.0-alpha05"
         const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}"
+    }
+
+    object Timber {
+        const val timber = "com.jakewharton.timber:timber:4.7.1"
     }
 }
