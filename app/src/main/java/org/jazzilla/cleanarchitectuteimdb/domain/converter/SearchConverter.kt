@@ -12,6 +12,6 @@ class SearchConverter {
             dataModel.search.map { dataToDomain(it) }
 
         fun dataToDomain(dataModel: SearchResultDataModel) : SearchDomainModel =
-            SearchDomainModel(dataModel.id, dataModel.name)
+            SearchDomainModel(dataModel.imdbID, dataModel.title)
     }
 }

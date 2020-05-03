@@ -1,4 +1,4 @@
-package org.jazzilla.cleanarchitectuteimdb.presentation.search
+package org.jazzilla.cleanarchitectuteimdb.presentation.view.search
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,8 +28,6 @@ class SearchViewModel(private val searchMovieUseCase: SearchMovieUseCase) : View
         }
     }
 }
-
-
 
 sealed class Either<out R, out T> {
     data class Success<out R>(val data: R) : Either<R, Nothing>()

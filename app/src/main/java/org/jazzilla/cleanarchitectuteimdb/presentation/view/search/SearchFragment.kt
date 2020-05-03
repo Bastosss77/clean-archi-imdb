@@ -1,8 +1,8 @@
-package org.jazzilla.cleanarchitectuteimdb.presentation.search
+package org.jazzilla.cleanarchitectuteimdb.presentation.view.search
 
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import androidx.core.widget.doOnTextChanged
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -12,7 +12,6 @@ import org.jazzilla.cleanarchitectuteimdb.domain.model.SearchDomainModel
 import org.jazzilla.cleanarchitectuteimdb.presentation.common.BaseFragment
 import org.jazzilla.cleanarchitectuteimdb.presentation.extension.observe
 import org.koin.android.viewmodel.ext.android.viewModel
-import timber.log.Timber
 
 class SearchFragment : BaseFragment(R.layout.fragment_search) {
     private lateinit var thisBinding: FragmentSearchBinding
@@ -63,6 +62,8 @@ class SearchFragment : BaseFragment(R.layout.fragment_search) {
     }
 
     private fun showError() {
-
+        context?.let {
+            Toast.makeText(it, "Something wrong appear", Toast.LENGTH_SHORT).show()
+        }
     }
 }

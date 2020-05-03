@@ -8,5 +8,5 @@ import retrofit2.http.Query
 interface SearchClient {
 
     @GET("./")
-    suspend fun search(@Query("type") type: String? = null, @Query("s") term: String) : Response<SearchDataModel>
+    suspend fun search(@Query("s") term: String) : Response<SearchDataModel>
 }

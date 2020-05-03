@@ -31,7 +31,7 @@ android {
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
-                targetCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
@@ -56,8 +56,7 @@ dependencies {
 
     implementation(Dependencies.Retrofit.retrofit)
     implementation(Dependencies.Retrofit.logging)
-    implementation(Dependencies.Retrofit.jackson)
-    implementation(Dependencies.Retrofit.jacksonKotlin)
+    implementation(Dependencies.Retrofit.gson)
 
     implementation(Dependencies.Timber.timber)
 }

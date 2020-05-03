@@ -29,8 +29,7 @@ object Dependencies {
     object Retrofit {
         const val retrofit = "com.squareup.retrofit2:retrofit:2.8.0"
         const val logging = "com.squareup.okhttp3:logging-interceptor:4.3.1"
-        const val jackson = "com.squareup.retrofit2:converter-jackson:2.8.0"
-        const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.10.+"
+        const val gson = "com.squareup.retrofit2:converter-gson:2.8.0"
     }
 
     object Gradle {

@@ -1,13 +1,11 @@
 package org.jazzilla.cleanarchitectuteimdb.data.source.remote
 
-import com.fasterxml.jackson.core.JsonGenerator
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.jazzilla.cleanarchitectuteimdb.BuildConfig
 import retrofit2.Retrofit
-import retrofit2.converter.jackson.JacksonConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.reflect.KClass
 
 object API {
@@ -31,11 +29,9 @@ object API {
             .addInterceptor(keyInterceptor)
             .build()
 
-        val objectMapper = jacksonObjectMapper().enable(JsonGenerator.Feature.IGNORE_UNKNOWN)
-
         retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .addConverterFactory(JacksonConverterFactory.create(objectMapper))
+            .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(imdbUrl)
             .build()
     }

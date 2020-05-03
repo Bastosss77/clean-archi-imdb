@@ -1,13 +1,15 @@
 package org.jazzilla.cleanarchitectuteimdb.data.model
 
-import com.fasterxml.jackson.annotation.JsonAlias
+import com.google.gson.annotations.SerializedName
 
 
 data class SearchDataModel(
-    @JsonAlias("Search")
+    @SerializedName("Search")
     val search: List<SearchResultDataModel>)
 
 data class SearchResultDataModel(
-    val id: String,
-    val name: String)
+    val imdbID: String,
+
+    @SerializedName("Title")
+    val title: String)
 
