@@ -7,5 +7,7 @@ Clean Architecture
 - Navigation Component
 - ViewModel
 - Coroutines (Flow)
-- DataBinding
+- Android DataBinding
 - Koin
+- Retrofit (Gson)
+- Timber
